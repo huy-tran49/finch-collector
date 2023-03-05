@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Toy Details</h1>
+
+
+  <div class="card">
+    <div class="card-content">
+    <span class="card-title">
+        <span class="card-title">
+            <span style="color: {{ toy.color }}">{{ toy.color }}</span> {{ toy.name }}
+        </span>
+    </span>
+   
+    <a class="btn" href="{% url 'toy_update' toy.id %}">Edit</a>
+    <a class="btn-red" href="{% url 'toy_delete' toy.id %}">Delete</a>
+    </div>
+    
+  </div>
+
+
+{% endblock %}
